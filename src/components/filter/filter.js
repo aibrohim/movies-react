@@ -1,4 +1,5 @@
 import Input from "../input/input";
+import Select from "../select/select";
 
 function Filter() {
   return (
@@ -14,9 +15,14 @@ function Filter() {
           {/* <input className="form-control js-search-form__rating-input" type="number" step="any" name="min_rating" placeholder="7.5" defaultValue={5} aria-label="Minimum rating" /> */}
         </div>
         <div className="form-group">
-          <select className="form-control js-search-form__genre-select" defaultValue="All" name="genre" aria-label="Genre">
+          {/* <select className="form-control js-search-form__genre-select" defaultValue="All" name="genre" aria-label="Genre">
             <option value="All">All</option>
-          </select>
+          </select> */}
+          <Select name="genre" aria-label="Select genre">
+            <option value="All">All</option>
+            <option value="0">Kino</option>
+            <option value="1">Multik</option>
+          </Select>
         </div>
         <div className="form-group">
           <select className="form-control js-search-form__sort-select" name="sort" aria-label="Sorting">
