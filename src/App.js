@@ -1,10 +1,11 @@
+import { useState } from "react";
 import Filter from "./components/filter/filter";
 import Header from "./components/header/header";
 import MovieCard from "./components/movie-card/movie-card";
-import movies from "./normalized-movies";
+import allMovies from "./normalized-movies";
 
 function App() {
-  console.log(movies);
+  const [movies, setMovies] = useState(allMovies);
 
   return (
     <>
@@ -15,7 +16,7 @@ function App() {
             <div className="row">
               <div className="col-md-4 mb-4">
                 <div className="container">
-                  <Filter />
+                  <Filter setMovies={setMovies} />
                   <section className="mb-4">
                     <h2>Bookmarked movies</h2>
                     <ul className="bookmarked-movies list-group" />

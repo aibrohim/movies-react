@@ -1,6 +1,9 @@
+import {ReactComponent as Calendar} from "../../assets/img/calendar.svg";
+// import Star from "../../assets/img/star.svg";
+
+import Star from "../../assets/img/star.svg";
+
 function MovieCard({title, smallPoster: poster, year, imdbRating: rating, trailer}) {
-
-
   return (
     <li className="search-results__item movie col-sm-6 mb-4">
       <div className="card">
@@ -9,10 +12,12 @@ function MovieCard({title, smallPoster: poster, year, imdbRating: rating, traile
         <div className="card-body">
           <h3 className="movie__title h5">{title}</h3>
           <p className="card-text">
+            <Calendar width="25" height="25" fill="blue" />
             <span className="movie__year">{year}</span>
           </p>
 
           <p className="card-text">
+            <img src={Star} width="25" height="25" alt="" />
             <span className="movie__rating">{rating}</span>
           </p>
 
