@@ -1,9 +1,10 @@
+import { forwardRef } from "react";
 import "./input.scss";
 
-function Input({className = "", ...props}) {
+function Input({className = "", ...props}, ref) {
   return (
-    <input className={"input " + className} type="text" {...props} />
+    <input ref={ref} className={"input " + className} type="text" {...props} />
   );
 }
 
-export default Input;
+export default forwardRef(Input);

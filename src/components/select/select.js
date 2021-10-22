@@ -1,9 +1,10 @@
+import { forwardRef } from "react";
 import "./select.css";
 
-function Select({className = "", ...props}) {
+function Select({className = "", ...props}, ref) {
   return (
-    <select className={"select " + className} {...props} />
+    <select ref={ref} className={"select " + className} {...props} />
   );
 }
 
-export default Select;
+export default forwardRef(Select);

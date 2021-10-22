@@ -7,6 +7,10 @@ import allMovies from "./normalized-movies";
 function App() {
   const [movies, setMovies] = useState(allMovies);
 
+  const handleFilterSubmit = ({title, rating, genre, sort}) => {
+    console.log(title, rating, genre, sort);
+  };
+
   return (
     <>
       <div>
@@ -16,7 +20,7 @@ function App() {
             <div className="row">
               <div className="col-md-4 mb-4">
                 <div className="container">
-                  <Filter setMovies={setMovies} />
+                  <Filter onSubmit={handleFilterSubmit} setMovies={setMovies} />
                   <section className="mb-4">
                     <h2>Bookmarked movies</h2>
                     <ul className="bookmarked-movies list-group" />
